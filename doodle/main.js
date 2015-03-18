@@ -246,10 +246,10 @@ function init() {
     document.onkeydown = function(e) {
       var key = e.keyCode;
       
-      if (key == 37) {
+      if (key == 97) {
         dir = "left";
         player.isMovingLeft = true;
-      } else if (key == 39) {
+      } else if (key == 100) {
         dir = "right";
         player.isMovingRight = true;
       }
@@ -591,7 +591,7 @@ function playerJump() {
   };
   
   //Iron Man MODE!
-  if (key == 38) {
+  if (key == 119) {
 	  player.vy += 20
   }
 

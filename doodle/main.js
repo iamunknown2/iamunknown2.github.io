@@ -589,11 +589,16 @@ function playerJump() {
       player.isMovingRight = false;
     }
   };
+  
+  //Iron Man MODE!
+  if (key == 38) {
+	  player.vy += 20
+  }
 
   //Accelerations produces when the user hold the keys
   if (player.isMovingLeft === true) {
     player.x += player.vx;
-    player.vx -= 0.15;
+    player.vx -= 0.1;
   } else {
     player.x += player.vx;
     if (player.vx < 0) player.vx += 0.1;
@@ -601,7 +606,7 @@ function playerJump() {
 
   if (player.isMovingRight === true) {
     player.x += player.vx;
-    player.vx += 0.15;
+    player.vx += 0.1;
   } else {
     player.x += player.vx;
     if (player.vx > 0) player.vx -= 0.1;

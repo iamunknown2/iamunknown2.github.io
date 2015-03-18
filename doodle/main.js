@@ -277,7 +277,7 @@ function init() {
     //Accelerations produces when the user hold the keys
     if (player.isMovingLeft === true) {
       player.x += player.vx;
-      player.vx -= 0.07;
+      player.vx -= 0.08;
     } else {
       player.x += player.vx;
       if (player.vx < 0) player.vx += 0.1;
@@ -285,17 +285,17 @@ function init() {
 
     if (player.isMovingRight === true) {
       player.x += player.vx;
-      player.vx += 0.07;
+      player.vx += 0.08;
     } else {
       player.x += player.vx;
       if (player.vx > 0) player.vx -= 0.1;
     }
 
     // Speed limits!
-    if(player.vx > 8)
-      player.vx = 8;
-    else if(player.vx < -8)
-      player.vx = -8;
+    if(player.vx > 10)
+      player.vx = 10;
+    else if(player.vx < -10)
+      player.vx = -10;
 
     //console.log(player.vx);
     

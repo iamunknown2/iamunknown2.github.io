@@ -20,7 +20,7 @@ var platforms = [],
   image = document.getElementById("sprite"),
   player, platformCount = 10,
   position = 0,
-  gravity = 0.2,
+  gravity = 0.16,
   animloop,
   flag = 0,
   menuloop, broken = 0,
@@ -277,7 +277,7 @@ function init() {
     //Accelerations produces when the user hold the keys
     if (player.isMovingLeft === true) {
       player.x += player.vx;
-      player.vx -= 0.15;
+      player.vx -= 0.07;
     } else {
       player.x += player.vx;
       if (player.vx < 0) player.vx += 0.1;
@@ -285,7 +285,7 @@ function init() {
 
     if (player.isMovingRight === true) {
       player.x += player.vx;
-      player.vx += 0.15;
+      player.vx += 0.07;
     } else {
       player.x += player.vx;
       if (player.vx > 0) player.vx -= 0.1;

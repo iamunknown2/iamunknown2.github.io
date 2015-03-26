@@ -5,6 +5,11 @@
 <title>I love XKCD</title>
 <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
 <meta name="TEST"/>
+<script language="javascript" type="text/javascript">
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
 </head>
 <h1>correcthorsebatterystaple</h1>
 <br>
@@ -14,3 +19,5 @@
 <h2><a href="http://www.howsecureismypassword.net" target="_blank">1st piece of proof</a></h2>
 <h2>2nd piece of proof:</h2>
 <img src="http://imgs.xkcd.com/comics/password_strength.png" alt="Password Strength">
+<h1><b>BTW, here's a random Doodle Jump game:</b></h1>
+<iframe name="Doodle Jump" src="./doodle-jump/index.html" frameborder="0" scrolling="no" id="iframe" onload='javascript:resizeIframe(this);' />

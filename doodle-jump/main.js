@@ -149,13 +149,9 @@ function Platform() {
   this.type = this.types[Math.floor(Math.random() * this.types.length)];
 
   //We can't have two consecutive breakable platforms otherwise it will be impossible to reach another platform sometimes!
-  function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-}
-  var random = getRandomArbitrary()
-  if (random == 1) {
+  if (this.type == 3 && broken < 1) {
     broken++;
-  } else if (random == 2) {
+  } else if (this.type == 3 && broken >= 1) {
     this.type = 1;
     broken = 0;
   }

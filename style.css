@@ -1,1 +1,29 @@
-h3 {color:Red;}
+.dialog {
+  border-radius: 8px;
+  background-color: #CCC;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+#container  {
+  width: 920px;
+  margin: auto;
+}
+
+body  {
+  font-family: Tahoma;
+  background-color: #EEE;
+}
+
+h1	{
+text-align: center;
+}
+
+h2  {
+text-align: center;
+}
+
+h3	{
+text-align: center;
+}

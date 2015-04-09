@@ -1,0 +1,11 @@
+0
+username
+repo
+branch
+message
+READ COMMENTS BELOW
+Line 1: '1' will make programs use this config file, any other value will make the programs ignore this file.
+Line 2: Replace 'username' with the username of the user who uses this program all the time.
+Line 3: Replace 'repo' with the name of the repository you push to all the time.
+Line 4: Replace 'branch' with the name of the branch you push to all the time.
+Line 5: Replace 'message' with the commit message you want to use all the time when you push stuff. Default will still be 'Update' if you leave the line blank.

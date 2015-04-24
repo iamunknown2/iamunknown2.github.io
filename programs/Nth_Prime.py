@@ -6,8 +6,8 @@ def clearscreen():
 		os.system("cls")
 	elif (os.name == "posix"):
 		os.system("clear")
-i = 2
-primes = [2]
+i = 1
+primes = []
 answer = int(input("Nth prime number (specify 'n'): "))
 clearscreen()
 if answer == 1:
@@ -17,19 +17,19 @@ if answer == 1:
 	raise SystemExit
 print("Prime 1: 2")
 while True:
-	i += 1
+	i += 2
 	is_prime = True
 	for prime in primes:
 		if i % prime == 0:
 			is_prime = False
+			break
 	if is_prime == True:
 		primes.append(i)
-		if len(primes) != answer:
-			print("Prime " + str(len(primes)) + ": " + str(i))
-	if len(primes) == answer:
+		if len(primes) + 1 != answer:
+			print("Prime " + str(len(primes) + 1) + ": " + str(i))
+	if len(primes) + 1 == answer:
 		print("")
-		print("Final answer below:")
-		print("")
-		print(i)
+		print("Final answer (Prime " + str(answer) + ") below:\n")
+		print(str(i) + "\n")
 		input("Hit Enter/Return to exit this program now: ")
 		raise SystemExit

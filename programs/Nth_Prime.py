@@ -32,9 +32,9 @@ while True:
 			break
 	if is_prime == True:
 		primes.append(i)
-	if len(primes) + 1 != answer:
-		print("Prime " + str(len(primes) + 1) + ": " + str(i))
-	else:
+		if len(primes) + 1 != answer:
+			print("Prime " + str(len(primes) + 1) + ": " + str(i))
+	if len(primes) + 1 == answer:
 		print("")
 		print("Final answer (Prime " + str(answer) + ") below:\n")
 		print(str(i) + "\n")

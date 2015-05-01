@@ -25,16 +25,16 @@ while True:
 	i += 2
 	is_prime = True
 	for prime in primes:
-		if prime > math.floor(math.sqrt(i)):
+		if prime ** 2 > i:
 			break
 		if i % prime == 0:
 			is_prime = False
 			break
 	if is_prime == True:
 		primes.append(i)
-		if len(primes) + 1 != answer:
-			print("Prime " + str(len(primes) + 1) + ": " + str(i))
-	if len(primes) + 1 == answer:
+	if len(primes) + 1 != answer:
+		print("Prime " + str(len(primes) + 1) + ": " + str(i))
+	else:
 		print("")
 		print("Final answer (Prime " + str(answer) + ") below:\n")
 		print(str(i) + "\n")

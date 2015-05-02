@@ -30,7 +30,7 @@ while True:
 		if i % prime == 0:
 			is_prime = False
 			break
-	if is_prime == True:
+	if is_prime:
 		primes.append(i)
 		if len(primes) + 1 != answer:
 			print("Prime " + str(len(primes) + 1) + ": " + str(i))

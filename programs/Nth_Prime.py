@@ -35,9 +35,7 @@ while True:
 		if len(primes) + 1 != answer:
 			print("Prime " + str(len(primes) + 1) + ": " + str(i))
 	if len(primes) + 1 == answer:
-		print("")
-		print("Final answer (Prime " + str(answer) + ") below:\n")
-		print(str(i) + "\n")
+		print("\nFinal answer (Prime " + str(answer) + "): " + str(i) + "\n")
 		print("Time elapsed: " + str(time.time() - start))
 		input("Hit Enter/Return to exit this program now: ")
 		raise SystemExit

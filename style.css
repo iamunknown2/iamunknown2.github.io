@@ -1,13 +1,18 @@
+/* Credit to some sources (including or maybe exclusively w3schools) for supplying solutions to my issues with HTML!
+This site is under the CC-BY-SA 2.5 license
+(modified of course)*/
 .dialog {
   border-radius: 8px;
   background-color: #ADD8E6;
   margin: auto;
   text-align: center;
   padding: 10px;
+  width:1000px;
 }
 
+
 #container  {
-  width: 920px;
+  width:920px;
   margin: auto;
 }
 

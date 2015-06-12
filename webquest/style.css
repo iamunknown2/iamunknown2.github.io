@@ -1,0 +1,149 @@
+/* Credit to some sources (including w3schools) for supplying solutions to my issues with HTML!
+This site is under the CC-BY-SA 2.5 license
+(modified of course) */
+/* Hint: Annotations, 2015 YouTube Rewind */
+.normal
+{
+	color: white;
+    background: url("webquest.jpg"); /* Original image from https://educ6040fall10.wikispaces.com/file/view/webquest/168672831/360x215/webquest */
+    display:block;
+    font-family: Ubuntu, sans-serif; /* Replace Ubuntu with your desired font. DON'T modify the sans-serif part! */
+}
+table
+{
+border-collapse:collapse;
+border:1px solid white; 
+margin-left:auto;
+margin-right:auto;
+width:550px;
+}
+
+td, th 
+{
+  border: solid 1px white;
+}
+
+table td #time
+{
+font-size: 25px;
+}
+
+table td #menu 
+{
+font-size:20px;
+}
+
+.dialog
+{
+	border-radius: 8px;
+	background-color: #3cb371;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+}
+
+.questions
+{
+	border-radius: 8px;
+	background-color: #3cb371;
+	margin: auto;
+	padding: 10px;
+}
+
+.dark
+{
+	color: white;
+    background-color: black; /* Original image from https://educ6040fall10.wikispaces.com/file/view/webquest/168672831/360x215/webquest */
+    display:block;
+    font-family: Ubuntu, sans-serif; /* Replace Ubuntu with your desired font. DON'T modify the sans-serif part! */
+}
+div {
+	width: 750px; /* Changes size of div. */
+}
+
+nav 
+{
+	position: absolute;
+	text-align: center;
+	left:30%;
+	margin:auto;
+}
+
+/* Code for navigation. */
+
+#primary_nav_wrap ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color:white
+}
+
+#primary_nav_wrap ul a
+{
+	display:block;
+	color:#333;
+	text-decoration:none;
+	text-align: center;
+	font-weight:700;
+	font-size:20px;
+	line-height:32px;
+	padding:0 40px;
+}
+
+#primary_nav_wrap ul li
+{
+	float:left;
+	margin:0;
+	padding:0;
+	background-color:white;
+}
+
+#primary_nav_wrap ul li.current-menu-item
+{
+	background:#f6f6f6;
+}
+
+#primary_nav_wrap ul li:hover
+{
+	background:#f6f6f6;
+}
+
+#primary_nav_wrap ul ul
+{
+	display:none;
+	top:100%;
+	left:0;
+	background:#fff;
+	padding:0;
+}
+
+#primary_nav_wrap ul ul li
+{
+	float:none;
+	width:200px;
+}
+
+#primary_nav_wrap ul ul a
+{
+	line-height:120%;
+	padding:10px;
+}
+
+#primary_nav_wrap ul ul ul
+{
+	top:0;
+	left:100%;
+	background-color:white;
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+	display:block;
+}
+
+a
+{
+	color: white;
+}

@@ -1,0 +1,49 @@
+<html>
+	<!-- Credit to some sources (including w3schools) for supplying solutions to my issues with HTML!-->
+	<!--This site is under the CC-BY-SA 2.5 license-->
+	<!--(modified of course)-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Webquest!</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	</head>
+	<body class="dark">
+		<script>
+			function statista() {
+				var answer = prompt("Please input amount of million of users Facebook had at the beginning of 2014. Input nothing if you don't have the answer yet.")
+				if (answer == "") {
+					alert("Use Statista to determine the answer to the question.");
+					alert("After dismissing this pop-up, you will be redirected to Statista. Good luck!");
+					window.location.href = "http://www.statista.com";
+				} else if (answer == "802") {
+					alert("Correct!");
+					alert("You will be redirected back to the Dark Webquest page after dismissing this pop-up.");
+					window.location.href = "altindex.html";
+				} else {
+					alert("Wrong!");
+					alert("Use Statista to determine the answer to the question.");
+					alert("After dismissing this pop-up, you will be redirected to Statista. Good luck!");
+					window.location.href = "http://www.statista.com";
+				};
+			};
+		</script>
+		<br>
+		<br>
+		<div class="dialog">
+			<h1>Question 12</h1>
+			<i>Hit the button and you'll see.</i>
+		</div>
+		<br>
+		<div class="dialog">
+			<button onclick="statista()">Click me!</button>
+		</div>
+		<br> <!--Remember to use <br> to make the div separate! -->
+		<br>
+		<br>
+		<div class="dialog" id="cc">
+			<!--You must preserve this div!-->
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img title="CC-BY-SA 4.0" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+		</div>
+		<br>
+	</body>
+</html>

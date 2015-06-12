@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<!-- Credit to some sources (including w3schools) for supplying solutions to my issues with HTML!-->
+	<!--This site is under the CC-BY-SA 2.5 license-->
+	<!--(modified of course)-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Webquest!</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	</head>
+	<body class="normal">
+		<br>
+		<br>
+		<div class="dialog">
+			<h1>Webquest!</h1>
+			<i>Hint: If stuck, inspect element!</i>
+		</div>
+		<br>
+		<div class="questions">
+			<ol>
+				<li>Please find an old picture on older versions of the SJS website featuring students using old-school desktops. <!--hint.html--></li>
+				<li>What is the search engine that will show a stopwatch when you type in "stopwatch"?
+				<button onclick="hint()">Psst!</button></li>
+				<script type="text/javascript" src="hint.js"></script>
+				<li>Do websites need to be experienced exactly the same in every browser?<!--anotherhint.html--></li>
+				<li>What is the location where the first YouTube video was filmed?<!--jNQXAC9IVRw--></li>
+				<li>I want you to make the code:
+					<ul>
+						<li>Ask for your name</li>
+						<li>Display "Hello (answer)!"</li>
+					</ul>
+					The code will run whenever you click on the button.
+					<br>
+					Enter the code via the textbox below.
+					<br>
+					<textarea rows="7" cols="50" id='jsval'></textarea>
+					<br>
+					P.S Don't tick the "Prevent this page from creating additional dialogs" thing before clicking OK/Cancel. If you do, you'll have to close the page and open it again!
+				</li>
+				<button onclick="eval(document.getElementById('jsval').value)">Click me!</button> <!--Credit to Patrick McElhaney at http://stackoverflow.com/questions/4875446/executing-javascript-from-inside-textarea-custom-js-console for the code used to execute the JS code inside the text area!-->
+				<li>How does Google figure out where/how to place search results (please answer in detail)? <!--PageR___--></li>
+				<li>Please find the <i>unlisted</i> blooper involving John Oliver and the kid president on YouTube.<!--Look at CSS--></li>
+				<li>What was the original webpage with $1,000,000 worth of ads on its homepage?</li>
+				<li>Please find an article on bacteria which was under review at the time from the <b>predecessor</b> of Wikipedia. <!--Geo Dash 2.0 2nd level song name--></li>
+				<li>When did Google searches for Flappy Bird begin? <!--10^100.com/trends/--></li>
+				<!--Ten more questions are hidden somewhere else. Can you find them?-->
+			</ol>
+		</div>
+		<br> <!--Remember to use <br> to make the div separate! -->
+		<br>
+		<div class="dialog">
+			<!--You must preserve this div!-->
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img title="__secret_questions__.html CTRL+SHIFT+I" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+		</div>
+		<br>
+	</body>
+</html>

@@ -7,7 +7,9 @@ var days_left = Math.ceil(Math.abs((firstDate.getTime() - secondDate.getTime())/
 if (days_left == 0 || days_left == -1) {
 	var html = "<h2 style=\"display:inline;\">IT'S FINALLY BEGUN!</h2>\n<br>\n<iframe width=\"0\" height=\"0\" src=\"https://www.youtube.com/embed/DcwRwYcDsk4?autoplay=1&loop=1&playlist=DcwRwYcDsk4\" frameborder=\"0\"></iframe><span>(P.S song is 305 by ApproachingNirvana</span>"; // YouTube embed hack (thought of this myself). Credit to multiple sources (e.g w3schools, stackoverflow and Google Developers References) for other things, e.g autoplay.
 } else if (days_left > 0) {
-	var html = "<h3>" + days_left.toString() + " days left until summer holiday begins..." + "</h3>";
+	var html = "<h3>" + days_left.toString() + " days left until the holiday begins..." + "</h3>";
+} else if (days_left == 7) {
+	var html = "<h2 style=\"display:inline;\">One week left...</h2>\n<br>\n<iframe width=\"0\" height=\"0\" src=\"https://www.youtube.com/embed/yanwIwtlzEI?autoplay=1&loop=1&playlist=yanwIwtlzEI\" frameborder=\"0\"></iframe><span>(P.S song is Final Battle by Waterflame</span>";
 } else {
 	var quotes = ["Summer is the annual permission slip to be lazy. To do nothing and have it count for something. To lie in the grass and count the stars. To sit on a branch and study the clouds. -Regina Brett",
 	"Summer afternoon, summer afternoon; to me those have always been the two most beautiful words in the English language. -Henry James",

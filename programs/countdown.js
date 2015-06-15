@@ -1,14 +1,14 @@
 // Start of code from http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
 // Planning to switch to "x days y hours z minutes left" instead
 var oneDay = 24 * 60 * 60 * 1000; // hrs * mins * secs * ms
-var oneHour = oneDay / 24
-var oneMinute = oneHour / 60
+var oneHour = oneDay / 24;
+var oneMinute = oneHour / 60;
 var firstDate = new Date();
 var secondDate = new Date(2015, 5, 27, 12, 20); // Countdown date changed
-var minutes_left = Math.ceil(Math.abs((firstDate.getTime() - secondDate.getTime())/ oneMinute)); // Changed Math.round to Math.ceil here, days_left to minutes left here
+var minutes_left = Math.ceil((secondDate.getTime() - firstDate.getTime()) / oneMinute); // Changed Math.round to Math.ceil here, days_left to minutes left here, removed Math.abs().
 // End of code from http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
-var hours_left = Math.floor(minutes_left / 60)
-var days_left = Math.floor(hours_left / 24)
+var hours_left = Math.floor(minutes_left / 60);
+var days_left = Math.floor(hours_left / 24);
 if (minutes_left <= 0 && minutes_left >= 1440) {
 	var html = "<h2 style=\"display:inline;\">IT'S FINALLY BEGUN!</h2>\n<br>\n<iframe width=\"0\" height=\"0\" src=\"https://www.youtube.com/embed/DcwRwYcDsk4?autoplay=1&loop=1&playlist=DcwRwYcDsk4\" frameborder=\"0\"></iframe><span>(P.S song is 305 by ApproachingNirvana</span>"; // YouTube embed hack (thought of this myself). Credit to multiple sources (e.g w3schools, stackoverflow and Google Developers References) for other things, e.g autoplay.
 } else if (minutes_left > 0) {

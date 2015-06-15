@@ -1,6 +1,6 @@
 // Start of code from http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
 // Planning to switch to "x days y hours z minutes left" instead
-var oneDay = 24*60*60*1000; // hrs * mins * secs * ms
+var oneDay = 24 * 60 * 60 * 1000; // hrs * mins * secs * ms
 var oneHour = oneDay / 24
 var oneMinute = oneHour / 60
 var firstDate = new Date();

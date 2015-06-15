@@ -13,7 +13,9 @@ if (days_left == 0 || days_left == -1) {
 } else {
 	var quotes = ["Summer is the annual permission slip to be lazy. To do nothing and have it count for something. To lie in the grass and count the stars. To sit on a branch and study the clouds. -Regina Brett",
 	"Summer afternoon, summer afternoon; to me those have always been the two most beautiful words in the English language. -Henry James",
-	"I love summertime more than anything else in the world. That is the only thing that gets me through the winter, knowing that summer is going to be there. -Jack McBrayer"
+	"I love summertime more than anything else in the world. That is the only thing that gets me through the winter, knowing that summer is going to be there. -Jack McBrayer",
+	"Deep summer is when laziness finds respectability. -Sam Keen",
+	"Summer has filled her veins with light and her heart is washed with noon. -C. Day Lewis"
 	];
 	// Quotes from Brainyquote.com
 	var random_choice = quotes[Math.floor(Math.random() * quotes.length)]; // Code from Jacob Relkin at http://stackoverflow.com/questions/4550505/getting-random-value-from-an-array

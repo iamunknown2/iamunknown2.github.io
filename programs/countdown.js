@@ -1,5 +1,5 @@
 // Start of code from http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
-// Planning to have live countdown (with seconds as well); will change without reloading - will have to use "while true".
+// Live countdown broke HTML - cancelled.
 var oneDay = 24 * 60 * 60 * 1000; // hrs * mins * secs * ms
 var oneHour = oneDay / 24;
 var oneMinute = oneHour / 60;
@@ -23,6 +23,6 @@ if (minutes_left <= 0 && minutes_left >= 1440) {
 	];
 	// Quotes from Brainyquote.com
 	var random_choice = quotes[Math.floor(Math.random() * quotes.length)]; // Code from Jacob Relkin at http://stackoverflow.com/questions/4550505/getting-random-value-from-an-array
-	var html = "<h3>" + random_choice + "</h3>"
+	var html = "<h3>" + random_choice + "</h3>";
 };
 document.getElementById("days_left").innerHTML = html;

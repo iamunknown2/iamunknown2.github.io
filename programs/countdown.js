@@ -23,6 +23,6 @@ if (minutes_left <= 0 && minutes_left >= 1440) {
 	];
 	// Quotes from Brainyquote.com
 	var random_choice = quotes[Math.floor(Math.random() * quotes.length)]; // Code from Jacob Relkin at http://stackoverflow.com/questions/4550505/getting-random-value-from-an-array
-	var html = "<h3>" + random_choice + "</h3>";
+	var html = "<h3><i>" + random_choice + "</i></h3>";
 };
 document.getElementById("days_left").innerHTML = html;

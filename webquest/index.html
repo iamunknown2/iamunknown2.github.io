@@ -14,7 +14,7 @@
 		<div class="dialog">
 			<h1>Webquest!</h1>
 			<i>
-				Clues are in the source for this website.
+				Clues are in the source for these sites.
 			</i>
 			<br>
 			<br>
@@ -43,9 +43,16 @@
 					<br>
 					<textarea rows="7" cols="50" id='jsval'></textarea>
 					<br>
+					<i id="errors"></i>
 					P.S Don't tick the "Prevent this page from creating additional dialogs" thing before clicking OK/Cancel. If you do, you'll have to close the page and open it again!
 				</li>
-				<button onclick="eval(document.getElementById('jsval').value)">Click me!</button> <!--Credit to Patrick McElhaney at http://stackoverflow.com/questions/4875446/executing-javascript-from-inside-textarea-custom-js-console for the code used to execute the JS code inside the text area!-->
+				<script>
+					function run() {
+						eval(document.getElementById('jsval').value); // Credit to Patrick McElhaney at http://stackoverflow.com/questions/4875446/executing-javascript-from-inside-textarea-custom-js-console for eval!
+						document.getElementById('errors').innerHTML = console.log;
+					};
+				</script>
+				<button onclick="run()">Click me!</button> 
 				<li>How does Google figure out where/how to place search results (please answer in detail)? <!--PageR___--></li>
 				<li>Please find the <i>unlisted</i> blooper involving John Oliver and the kid president on YouTube.<!--Look at CSS--></li>
 				<li>What was the original webpage with $1,000,000 worth of pixel-ads on its homepage?</li>

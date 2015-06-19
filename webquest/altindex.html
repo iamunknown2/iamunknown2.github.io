@@ -11,11 +11,16 @@
 	<body class="dark">
 		<script>
 			function go() {
+				alert("Hint: Ctrl+U");
 				window.location.href = "http://iamunknown2.github.io";
 			};
 			function linkhunt() {
 				document.getElementById('cc').innerHTML = '<a rel="license" href="questiontoe.html"><img title="CC-BY-SA 4.0" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.';
-				alert("Hint: licensing")
+				alert("Hint: licensing");
+			};
+			function done() {
+				alert("If you've finished the course, enjoy the puzzle game.");
+				window.location.href = "http://alexnisnevich.github.io/untrusted/";
 			};
 		</script>
 		<br>
@@ -39,6 +44,7 @@
 			18. What is the Google feature that <b>used</b> to cost Google around $110 million a year?
 			19. What is the most upvoted answer on StackOverflow about?
 			20. Find a 14 character command that will lag Linux to the point that you'll have to force shutdown. <!-- Hint: ---E bomb -->
+			<button onclick="done()"
 		</div>
 		<br> <!--Remember to use <br> to make the div separate! -->
 		<br>

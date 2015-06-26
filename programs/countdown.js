@@ -10,7 +10,7 @@ var minutes_left = Math.ceil((secondDate.getTime() - firstDate.getTime()) / oneM
 var hours_left = Math.floor(minutes_left / 60);
 var days_left = Math.floor(hours_left / 24);
 if (minutes_left <= 0 && minutes_left >= -1440) {
-	var html = "<h2 style=\"display:inline;\">IT'S FINALLY BEGUN!</h2><br><iframe style=\"visibility:hidden;display:none\" src=\"http://audio.ngfiles.com/613000/613929_Dance-Of-The-Violins.mp3\" width=\"0px\" height=\"0px\"></iframe>"; // Credit to multiple sources (e.g w3schools, stackoverflow, Google Developers References) for sources towards creating this "hack".
+	var html = "<h2 style=\"display:inline;\">IT'S FINALLY BEGUN!</h2><br><iframe style=\"visibility:hidden;display:none\" src=\"http://audio.ngfiles.com/613000/613929_Dance-Of-The-Violins.mp3\" width=\"0px\" height=\"0px\"></iframe>"; // Credit to multiple sources (e.g w3schools, stackoverflow, Google Developers References, coderanch) for sources towards creating this "hack".
 } else if (minutes_left > 0) {
 	var html = "<h3>" + days_left + " days, " + (hours_left - (24 * days_left)) + " hours and " + (minutes_left - (60 * hours_left)) + " minutes left until the holiday begins..." + "</h3>";
 } else {

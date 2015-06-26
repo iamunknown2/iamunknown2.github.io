@@ -9,8 +9,9 @@ var minutes_left = Math.ceil((secondDate.getTime() - firstDate.getTime()) / oneM
 // End of code from http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
 var hours_left = Math.floor(minutes_left / 60);
 var days_left = Math.floor(hours_left / 24);
-if (minutes_left <= 0 && minutes_left >= 1440) {
-	var html = "<h2 style=\"display:inline;\">IT'S FINALLY BEGUN!</h2>\n<br>\n<iframe width=\"0\" height=\"0\" src=\"https://www.youtube.com/embed/DcwRwYcDsk4?autoplay=1&loop=1&playlist=DcwRwYcDsk4\" frameborder=\"0\"></iframe><span>(P.S song is 305 by ApproachingNirvana</span>"; // YouTube embed hack (thought of this myself). Credit to multiple sources (e.g w3schools, stackoverflow and Google Developers References) for other things, e.g autoplay.
+alert(minutes_left);
+if (minutes_left <= 0 && minutes_left >= -1440) {
+	var html = "<h2 style=\"display:inline;\">IT'S FINALLY BEGUN!</h2>\n<br>\n<iframe width=\"0\" height=\"0\" src=\"https://www.youtube.com/embed/DcwRwYcDsk4?autoplay=1&loop=1&playlist=DcwRwYcDsk4\" frameborder=\"0\"></iframe><span>(P.S song is 305 by ApproachingNirvana)</span>"; // YouTube embed hack (thought of this myself). Credit to multiple sources (e.g w3schools, stackoverflow and Google Developers References) for other things, e.g autoplay.
 } else if (minutes_left > 0) {
 	var html = "<h3>" + days_left + " days, " + (hours_left - (24 * days_left)) + " hours and " + (minutes_left - (60 * hours_left)) + " minutes left until the holiday begins..." + "</h3>";
 } else {

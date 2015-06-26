@@ -4,7 +4,7 @@ var oneDay = 24 * 60 * 60 * 1000; // hrs * mins * secs * ms
 var oneHour = oneDay / 24;
 var oneMinute = oneHour / 60;
 var firstDate = new Date();
-var secondDate = new Date(2015, 5, 27, 12, 20); // Countdown date changed
+var secondDate = new Date(2015, 5, 26, 12, 20); // Countdown date changed
 var minutes_left = Math.ceil((secondDate.getTime() - firstDate.getTime()) / oneMinute); // Changed Math.round to Math.ceil here, days_left to minutes left here, removed Math.abs().
 // End of code from http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
 var hours_left = Math.floor(minutes_left / 60);

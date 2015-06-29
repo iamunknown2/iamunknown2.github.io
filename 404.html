@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<!-- P.S This is a spam killer. -->
+<html>
+	<head><title>iamunknown2's site!</title></head>
+	<body>
+		<div id="div1"></div>
+		<script id="script">
+			for (var i = 0; i < 30; i++) {
+				var rand = Math.random().toString();
+				document.getElementById("div1").innerHTML = document.getElementById("div1").innerHTML + "<br>" + "<a href=\"mailto:" + rand.slice(2, rand.length) + "@gmail.com\">" + rand.slice(2, rand.length) + "@gmail.com" + "</a>";
+			};
+		</script>
+		<br>
+		<div id="div2"><a id="next">Next</a></div>
+		<script>
+			var rand = Math.random().toString();
+			document.getElementById("next").setAttribute("href", rand.slice(2, rand.length));
+		</script>
+	</body>
+</html>

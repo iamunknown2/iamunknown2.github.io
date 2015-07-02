@@ -21,7 +21,7 @@ if (minutes_left <= 0 && minutes_left >= -1440) {
 	"Deep summer is when laziness finds respectability. -Sam Keen",
 	"Summer has filled her veins with light and her heart is washed with noon. -C. Day Lewis"
 	];
-	// Quotes from Brainyquote.com
+	// Quotes from brainyquote.com
 	var random_choice = quotes[Math.floor(Math.random() * quotes.length)]; // Code from Jacob Relkin at http://stackoverflow.com/questions/4550505/getting-random-value-from-an-array
 	var html = "<h3><i>" + random_choice + "</i></h3>";
 };

@@ -2,35 +2,37 @@
 This site is under the CC-BY-SA 2.5 license
 (modified of course)*/
 .dialog {
-  border-radius: 8px;
-  background-color: #ADD8E6;
-  margin: auto;
-  text-align: center;
-  padding: 10px;
-  width:1000px;
+	border-radius: 8px;
+	background-color: #ADD8E6;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	width:1000px;
 }
 
-
-#container  {
-  width:920px;
-  margin: auto;
+.toc {
+	background-color: #ADD8E6;
+	text-align: center;
+	border-radius: 8px;
+	padding: 10px;
+	width: 250px;
 }
 
 body  {
-  font-family: Ubuntu, sans-serif;
-  background-image: url("./other/background.png");
-  background-size: 150px 150px;
-  background-repeat;
+	font-family: Ubuntu, sans-serif;
+	background-image: url("./other/background.png");
+	background-size: 150px 150px;
+	background-repeat;
 }
 
 h1	{
-text-align: center;
+	text-align: center;
 }
 
 h2  {
-text-align: center;
+	text-align: center;
 }
 
 h3	{
-text-align: center;
+	text-align: center;
 }

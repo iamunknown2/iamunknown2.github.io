@@ -6,16 +6,8 @@ This site is under the CC-BY-SA 2.5 license
 	background-color: #ADD8E6;
 	margin: auto;
 	text-align: center;
-	padding: 10px;
-	width:1000px;
-}
-
-.toc {
-	background-color: #ADD8E6;
-	text-align: center;
-	border-radius: 8px;
-	padding: 10px;
-	width: 250px;
+	padding: 1em;
+	width: 70em;
 }
 
 body  {

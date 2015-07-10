@@ -46,8 +46,10 @@
 				</li>
 				<script>
 					function run() {
-						eval(document.getElementById('jsval').value); // Credit to Patrick McElhaney at http://stackoverflow.com/questions/4875446/executing-javascript-from-inside-textarea-custom-js-console for eval!
-						document.getElementById('errors').innerHTML = console.log;
+						if (document.getElementById('jsval').value == "") {
+							eval(document.getElementById('jsval').value); // Credit to Patrick McElhaney at http://stackoverflow.com/questions/4875446/executing-javascript-from-inside-textarea-custom-js-console for eval!
+							document.getElementById('errors').innerHTML = console.log;
+						};
 					};
 				</script>
 				<button onclick="run()">Click me!</button> 

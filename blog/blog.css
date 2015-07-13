@@ -1,0 +1,25 @@
+body
+{
+	width: 35em;
+	margin: auto;
+	font-family: 'Open Sans';
+	font-size: 25px;
+}
+blockquote
+{
+	border-left: 0.2em solid black;
+	padding-left: 1em;
+}
+table
+{
+	margin: auto;
+}
+table, td, tr
+{
+	border: 0.1em solid black;
+	border-collapse: collapse;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+}

@@ -4,10 +4,10 @@ This site is under the CC-BY-SA 2.5 license
 .dialog {
 	border-radius: 8px;
 	background-color: #ADD8E6;
-	margin: auto;
+	margin-left: 3em;
+	margin-right: 3em;
 	text-align: center;
 	padding: 1em;
-	width: 70em;
 }
 
 body  {

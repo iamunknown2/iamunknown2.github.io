@@ -50,6 +50,7 @@ code
 	display: block;
 	background-color: #E8E8EE;
 	font-size: 12px;
+	word-wrap: break-word;
 }
 table
 {

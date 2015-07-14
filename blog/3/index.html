@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" type="text/css" href="../blog.css"> 
+                <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> 
+	<head>
+	<body>
+		<div id=content>
+			<h1>My blog template</h1>
+			<p>Hello again! I'm going to show you how to use my blog layout I am currently using right now!</p>
+			<ol>
+				<li>Firstly, put this in your head:
+				<code>
+					&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+					<br>
+					&lt;link rel="stylesheet" type="text/css" href="../blog.css"&gt;
+					<br>
+					&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;
+				</code>
+				</li>
+				<li>Put your content in the div tag with the "content" ID.</li>
+				<li>If you want navigation, put this code after the "content" div:
+				<code>
+					&lt;a href="#linktolastpost" id="previous"&gt;Previous post&lt;/a&gt;
+					&lt;a href="#linktonextpost" id="next"&gt;Next post&lt;/a&gt;
+				</code>
+				If you're applying the navigation links to the first post, remove the first &lt;a&gt; tag. If you're applying the navigation links to the latest post, remove the second &lt;a&gt; tag.</li>
+			</ol>
+			<h3>Wait, that's it?</h3>
+			<p>Yep! Just use &lt;code&gt; for codeblocks and you'll be fine.</p>
+			<h3>Is this template mobile friendly?</h3>
+			<p>Yep!</p>
+		</div>
+					<a href="../2" id="previous">Previous post</a>
+					<a href="../4" id="next" style="display:none;">Next post</a>

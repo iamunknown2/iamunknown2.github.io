@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>An Introduction to JavaScript - Part 1</title>
+		<title>An Introduction to JavaScript - Part 2</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../blog.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -9,6 +9,12 @@
 	<body>
 		<div id="content">
 			<h1>An Introduction to JavaScript - Part 2</h1>
+			<h2>Types of values</h2>
+			<p>Before we delve into the world of variables/arrays/objects, we will explain some of the types of values:<p>
+			<ul>
+				<li><i>Strings</i> are groups of letters <i>strung</i> together. However, strings can consist of only one letter. Example: "This is a string"</li>
+				<li><i>Integers</i> are numbers without any decimal points. Example: 42</li>
+				<li>On the other hand, <i>floats</i> are numbers with a decimal point. Example: 12.012</li> 
 			<h2>Variables</h2>
 			<h3>What <i>are</i> variables?</h3>
 			<p>I'll use an analogy for this question. Let's say that variables are storage boxes:</p>
@@ -22,6 +28,7 @@
 			<h3>Oh. But how do I make and modify variables?</h3>
 			<p>It's quite simple! Open up the console (this should be explained in the previous post) and type this in:</p>
 			<code>var x = 10;</code>
+			<p>To explain what the equal sign does, I'll raise an example of using the "=" sign in JavaScript: x = y in JavaScript will set the value of x to y.</p>
 			<p>Afterwards, type this in and see what happens:</p>
 			<code>alert(x);</code>
 			<h3>Why does that happen?</h3>
@@ -47,6 +54,16 @@
 			<code>myarray[elementnumber]</code>
 			<h3>It's not working! I put in myarray[1] and the 2nd item in my array came up instead!</h3>
 			<p>The 1st item of the array is <b>myarray[0]</b>, the second item of the array is <b>myarray[1]</b>, and so on.</p>
-			<h2>THIS IS A WORK-IN-PROGRESS</h2>
+			<h3>How do you make new items in the array anyway?</h3>
+			<p>This is a good time to introduce the <i>golden rule of arrays and variables</i>:</p>
+			<blockquote>If the value(s) in an array/variable don't/doesn't exist, it will automatically create it before proceeding.</blockquote>
+			<p>In this command, the non-existent element in the array will be created before being assigned a value:</p>
+			<code>myarray[20] = "somevalue";</code>
+			<p>In fact, when declaring arrays/variables, you can leave out the <b>var</b> completely.</p>
 		</div>
-<a href="../1" id="previous">Previous post</a>
+		<br>
+		<br>
+		<a href="../1" id="previous">Previous post</a>
+		<a href="../3" id="next">Next post</a>
+	</body>
+</html>

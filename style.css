@@ -4,27 +4,32 @@ This site is under the CC-BY-SA 2.5 license
 .dialog {
 	border-radius: 8px;
 	background-color: #ADD8E6;
-	margin-left: 15%;
-	margin-right: 15%%;
+	margin-left: 7%;
+	margin-right: 7%;
 	text-align: center;
 	padding: 1em;
 }
 
-body  {
+iframe {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+}
+body {
 	font-family: Ubuntu, sans-serif;
 	background-image: url("./other/background.png");
 	background-size: 150px 150px;
 	background-repeat;
 }
 
-h1	{
+h1 {
 	text-align: center;
 }
 
-h2  {
+h2 {
 	text-align: center;
 }
 
-h3	{
+h3 {
 	text-align: center;
 }

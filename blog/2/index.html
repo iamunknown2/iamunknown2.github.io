@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>An Introduction to JavaScript - Part 1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../blog.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="content">
+			<h1>An Introduction to JavaScript - Part 2</h1>
+			<h2>Variables</h2>
+			<h3>What <i>are</i> variables?</h3>
+			<p>I'll use an analogy for this question. Let's say that variables are storage boxes:</p>
+			<code>
+				<u style="text-decoration:overline underline;">|Box|</u>
+			</code>
+			<p>The "boxes" (<i>variables</i>) store <i>values</i> instead. Here's another diagram to illustrate that:</p>
+			<code>
+				"Hello world" ---&gt; <u style="text-decoration:overline underline;">|Box|</u>
+			</code>
+			<h3>Oh. But how do I make and modify variables?</h3>
+			<p>It's quite simple! Open up the console (this should be explained in the previous post) and type this in:</p>
+			<code>var x = 10;</code>
+			<p>Afterwards, type this in and see what happens:</p>
+			<code>alert(x);</code>
+			<h3>Why does that happen?</h3>
+			<p>Let's use the box analogy again (diagrams in <b>bold</b>):</p>
+			<code>
+				var x = 10;
+				<br>
+				<b>10 ---&gt; <u style="text-decoration:overline underline;">|Box|</u></b>
+				<br>
+				<br>
+				<br>
+				alert(x);
+				<br>
+				<b><u style="text-decoration:overline underline;">|Box|</u> ---&gt; 10 ---&gt; alert() ---&gt; <a href="javascript:alert(10);">Click here for result</a></b>
+			</code>
+			<h3>I see. Are there ways to put more than one value in a variable?</h3>
+			<p>Yes. You can store multiple values in something called an <i>array</i>. I don't think I need to explain how it works.</p>
+			<h3>Cool, but how do you use arrays?</h3>
+			<p>To make a new array:</p>
+			<code>var myarray = ["item1", "item2"]</code>
+			<h3>How do you access particular elements to your array?</h3>
+			<p>This is how you get an element in your array:</p>
+			<code>myarray[elementnumber]</code>
+			<h3>It's not working! I put in myarray[1] and the 2nd item in my array came up instead!</h3>
+			<p>The 1st item of the array is <b>myarray[0]</b>, the second item of the array is <b>myarray[1]</b>, and so on.</p>
+			<h2>THIS IS A WORK-IN-PROGRESS</h2>
+		</div>
+<a href="../1" id="previous">Previous post</a>

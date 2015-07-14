@@ -1,17 +1,41 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<title>An Introduction to JavaScript - Part 1</title>
 		<link rel="stylesheet" type="text/css" href="../blog.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="content">
-			<h1>An introduction to Javascript</h1>
+			<h1>An Introduction to JavaScript - Part 1</h1>
+			<h2>Introduction</h2>
 			<p>If you're reading this, you're probably trying to learn how to program. Despite what some teachers will tell you, learning Pascal/Fortran/any language you've never heard of is <i>not</i> the way to learn programming nowadays, as Pascal was made between 1968 and 1969 - Yep, it was made when the military was the only group that had any access to ARPANET (the predecessor of the Internet)!</p>
-			<p>Nowadays, it's different. The web has its own industry (e.g Google). Guess what the programming language of the web is? HTML and CSS? Despite what you may believe, HTML and CSS isn't actually a programming language - HTML is just for displaying content, while CSS is to make the content prettier. Instead, the programming (or I should say <b>scripting</b>) language of the web is <b>Javascript</b>.</p>
+			<p>Nowadays, it's different. The web has its own industry (e.g Google). Guess what the programming language of the web is? HTML and CSS? Despite what you may believe, HTML and CSS isn't actually a programming language - HTML is just for displaying content, while CSS is to make the content prettier. Instead, the programming (or I should say <b>scripting</b>) language of the web is <b>JavaScript</b>.</p>
 			<p>As the title suggests, I'm going to teach you a bit of JavaScript. Let's start with the basics...</p>
+			<br>
 			<h2>Before we begin...</h2>
 			<p>Hold Ctrl+Shift+I (as in eye) and see what pops up. To make sure you can follow my further instructions, hit	the button on the left of the "x" button if you see something popping out from the right. Now, you should see a window at the bottom of your screen. Finally, click on the "Console" tab of the window.</p>
+			<figure>
+				<img src="devtools.png" />
+				<figcaption>What you should see at the bottom of the screen</figcaption>
+			</figure>
+			<p>Let's get started!</p>
+			<br>
+			<h2>Alerting, logging, errors and all that stuff</h2>
+			<p>For a start, see what happens when you type this into the console (that you presumably have open) before hitting Enter:</p>
+			<code>console.log("Hello world");</code>
+			<p>To explain how this works completely would require us to have a more advanced understanding of JS which will be unveiled later in this course. However, the best way to put it is that <b>console.log()</b> is a <i>function</i> (a command) that will print (aka <i>log</i> anything between the brackets (in this case, "Hello world") to the console.</p>
+			<h3>What about those pop-up boxes? Can you make them in JavaScript?</h3>
+			<p>Yes. In fact, you're <i>supposed</i> to make those pop-up boxes in JavaScript! Type this into the console before you hit Enter:
+			</p>
+			<code>alert("Hello world");</code>
+			<p>As you can see, <b>alert()</b> is a <i>function</i> that outputs whatever's in the brackets (in this case, "Hello world") to the console.</p>
+			<h3>I was talking about the kind of pop-up box that has 2 options!</h3>
+			<p>Fine. It's</p>
+			<code>confirm("This is a confirm message.")</code>
+			<p>And while you're at it, see what this does:</p>
+			<code>prompt("Input something:")</code>
+			<p>But in order to make the confirm/prompt boxes <i>interactive</i>, it'll require us to have at least a basic understanding of variables, which I will cover in the next post.</p>
 		</div>
 	</body>
 </html>

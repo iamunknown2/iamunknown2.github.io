@@ -8,8 +8,8 @@ h1
 }
 #content
 {
-	margin: auto;
-	width: 35em;
+	margin-left: 5em;
+	margin-right: 5em;
 }
 blockquote
 {
@@ -19,6 +19,7 @@ blockquote
 code
 {
 	border: 0.1em solid black;
+	border-radius: 0.5em;
 	padding: 0.5em;
 	display: block;
 	background-color: #E8E8EE;
@@ -36,4 +37,16 @@ table, td, tr
 	padding-right: 0.5em;
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
+}
+figure
+{
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+img
+{
+	max-width: 100%;
+	height: auto;
+	width: auto;
 }

@@ -10,7 +10,7 @@
 		<div id="content">
 			<h1>An Introduction to JavaScript - Part 2</h1>
 			<h2>Types of values</h2>
-			<p>Before we delve into the world of variables/arrays/objects, we will explain some of the types of values:<p>
+			<p>Before we delve into the world of variables/arrays/objects/etc, we will explain some of the types of values:<p>
 			<ul>
 				<li><i>Strings</i> are groups of letters <i>strung</i> together. However, strings can consist of only one letter. Example: "This is a string"</li>
 				<li><i>Integers</i> are numbers without any decimal points. Example: 42</li>
@@ -57,10 +57,30 @@
 			<p>The 1st item of the array is <b>myarray[0]</b>, the second item of the array is <b>myarray[1]</b>, and so on.</p>
 			<h3>How do you make new items in the array anyway?</h3>
 			<p>This is a good time to introduce the <i>golden rule of arrays and variables</i>:</p>
-			<blockquote>If the value(s) in an array/variable don't/doesn't exist, it will automatically create it before proceeding.</blockquote>
-			<p>In this command, the non-existent element in the array will be created before being assigned a value:</p>
+			<blockquote>If the value(s) in an array/variable don't/doesn't exist, the previously non-existent array/variable/array item will be automatically created before proceeding.</blockquote>
+			<p>In this command, the 20th element in the array will be created (if it was non-existent) before being assigned a value:</p>
 			<code>myarray[20] = "somevalue";</code>
 			<p>In fact, when declaring arrays/variables, you can leave out the <b>var</b> completely.</p>
+			<h2>Summary</h2>
+			<ul>
+				<li>Strings are letter(s), declared with quotes on either end of the string</li>
+				<li>Integers are whole numbers</li>
+				<li>Floats are numbers with decimal places</li>
+				<li>
+					To declare a variable:
+					<code>variable_name = initial_value;</code>
+					<br>
+					Example:
+					<code>myvariable = 10;</code>
+				</li>
+				<li>
+					To declare an array:
+					<code>array_name = [value1, value2, value3];</code>
+					<br>
+					Example:
+					<code>mypicnic = ["fruit", "vegetables", "bread"];</code>
+				</li>
+			</ul>
 		</div>
 		<br>
 		<br>

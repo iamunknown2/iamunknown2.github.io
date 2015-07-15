@@ -26,18 +26,25 @@
 			<p>For a start, see what happens when you type this into the console (that you presumably have open) before hitting Enter:</p>
 			<code>console.log("Hello world");</code>
 			<h3>Wow! How does that work?</h3>
-			<p>To explain how this works completely would require us to have a more advanced understanding of JS which will be unveiled later in this course. However, the best way to put it is that <b>console.log()</b> is a <i>function</i> (a command) that will print (aka <i>log</i> anything between the brackets (in this case, "Hello world") to the console.</p>
+			<p>To explain how this works completely would require us to have a more advanced understanding of JS which will be unveiled later in this course. However, the best way to put it is that <b>console.log()</b> is a <i>function</i> (a command) that will print (aka <i>log</i> anything between the brackets (the thing between the brackets is also known as a <i>parameter</i>) to the console.</p>
 			<h3>What about those pop-up boxes? Can you make them in JavaScript?</h3>
 			<p>Yes. In fact, you're <i>supposed</i> to make those pop-up boxes in JavaScript! Type this into the console before you hit Enter:
 			</p>
 			<code>alert("Hello world");</code>
-			<p>As you can see, <b>alert()</b> is a <i>function</i> that outputs whatever's in the brackets (in this case, "Hello world") to the console.</p>
+			<p>As you can see, <b>alert()</b> is a <i>function</i> that outputs the parameters to the console.</p>
 			<h3>I was talking about the kind of pop-up box that has 2 options!</h3>
 			<p>Fine. It's</p>
 			<code>confirm("This is a confirm message.")</code>
 			<p>And while you're at it, see what this does:</p>
-			<code>prompt("Input something:")</code>
+			<code>prompt("Input something:", "Place input here")</code>
 			<p>But in order to make the confirm/prompt boxes <i>interactive</i>, it'll require us to have at least a basic understanding of variables/arrays etc, which I will cover in the next post.</p>
+			<h2>Summary for part 1</h2>
+			<ul>
+				<li><b>console.log</b> outputs its <i>parameter</i> to the JavaScript console</li>
+				<li><b>alert</b> (or <b>window.alert</b>) will output its parameter to a pop-up box.</li>
+				<li><b>confirm</b> (or <b>window.confirm</b>) will output its parameter to a pop-up box <i>with 2 options</i>: OK/Cancel.</li>
+				<li><b>prompt</b> (or <b>window.prompt</b>) will output its first parameter to the message in a pop-up box, and will output its second parameter to the message inside the input box, which in turn is inside the pop-up box.
+			</ul>
 		</div>
 		<a href="iamunknown2.github.io/blog/0/" id="previous" style="display:none;">Previous post</a>
 		<a href="../2/" id="next">Next post</a>

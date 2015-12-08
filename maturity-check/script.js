@@ -64,10 +64,22 @@ function badCases(string)
 function repeatLetters(string)
 {
 	var repeatPenalty = 0;
+	var newString = string.toLowerCase();
 	var streak = 0; // The more repeat letters you have in a row, the bigger the penalty will be per letter.
+	var repeatExceptions = ["aaaaba", "illlit", "gillless", "wallless", "bulllike", "hilllike", "aaadonta", "willless", "shellless", "skillless", "skulllike", "goddessship", "hostessship", "willlessness", "headmistressship"];
+	for (var i = 0; i < repeatExceptions.length; i++)
+	{
+		if (search(newString, repeatExceptions[i]) === 0)
+		{
+			newString = newString.replace(repeatExceptions[i], dummy(repeatExceptions[i].length));
+		}
+		var acronyms = new RegExp(repeatExceptions[i] + " | " + repeatExceptions[i]);
+		newString = newString.replace(acronyms, dummy(repeatExceptions[i].length));
+	// This will replace the strings with equally long "dummies"
+	}
 	for (var i = 3; i < string.length; i++)
 	{
-		if (string[i] == string[i - 1] && string[i - 1] == string[i - 2] && string[i - 2] == string[i - 3] && (string[i].match(/^[A-z]+$/) || string[i] == "."))
+		if (newString[i] == newString[i - 1] && newString[i - 1] == newString[i - 2] && (newString[i].match(/^[A-z]+$/) || newString[i] == "."))
 		{
 			streak += 1;
 			repeatPenalty += streak;

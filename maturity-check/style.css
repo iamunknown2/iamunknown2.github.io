@@ -1,0 +1,21 @@
+body
+{
+	text-align: center;
+	background-color: lightblue;
+}
+
+#explain
+{
+	font-size: 25px;
+}
+
+#text
+{
+	width: 80%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#score
+{
+	font-size: 75px;
+}

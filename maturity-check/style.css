@@ -3,6 +3,7 @@ body
 	text-align: center;
 	background-color: lightblue;
 	word-break: break-all;
+	margin; 95%;
 }
 
 #explain
@@ -12,7 +13,7 @@ body
 
 #text
 {
-	width: 80%;
+	width: 95%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }

@@ -28,8 +28,8 @@ function dummy(length)
 
 function badCases(string)
 {
-	var puncList = [".", "!", "?", "'", "\"", ":", ";"];
-	var capsExceptions = ["AMA", "GTG", "OK", "IIRC", "TTYL"]; // You can get away with all-caps-ing these...
+	var puncList = [".", "!", "?", "'", ",", "\"", "“", "”", ":", ";"];
+	var capsExceptions = ["AMA", "GTG", "BRB", "OK", "AFAIK", "AFAICT", "OTOH", "FTW", "LOL", "IIRC", "TTYL", "BTW", "FTFY", "IYTAI", "MERRY CHRISTMAS", "HAPPY HOLIDAYS"]; // You can get away with all-caps-ing these...
 	var necPuncList = [".", "!", "?"]; // You MUST put a capital after these punctuation marks.
 	for (var i = 0; i < capsExceptions.length; i++)
 	{
@@ -131,34 +131,38 @@ function badPunctuation(string)
 	return repeatPenalty + followPenalty;
 }
 
-function maturity(text)
+function insults(string)
 {
-	var penalty = 0;
-	var strippedText = text.toLowerCase().replace(/ /g, ""); // Converts all to lowercase, then removes all spaces
-	var badCase = badCases(text);
-	// Above code is for determining the amount of unnecessary capitals and neglected but necessary capitals
-	var badPunc = badPunctuation(text);
-	var badRepeat = repeatLetters(text);
-	// Above code is for determining the amount of "bad" marks
-	if (wotsize(text) > 400)
+	var strippedString = string.toLowerCase().replace(/ /g, "");
+	var insultPenalty = 0;
+	var indexList = ["ban", "takedown", "takesdown", "fightfor", "ihate", "idiot", "stupid", "asdf", "hjkl"];
+	for (var i = 0; i < indexList.length; i++)
 	{
-		penalty += 0.2; // More than 400 characters/paragraph is too much
-	}
-	// Above code is for adding penalty for wall of text
-	var indexlist = ["ban", "takedown", "takesdown", "fightfor", "ihate"];
-	for (var i = 0; i < indexlist.length; i++)
-	{
+		var insults = new RegExp(indexList[i], "g");
+		if (string.match(insults) !== null)
 		{
-			if (search(strippedText, indexlist[i]) !== -1)
-			{
-				penalty += 0.05;
-			}
+			insultPenalty += string.match(insults).length
 		}
 	}
+	return insultPenalty;
+}
+
+function maturity(text)
+{
+	var wotPenalty = 0;
+	var badCase = badCases(text);
+	var badPunc = badPunctuation(text);
+	var badRepeat = repeatLetters(text);
+	var badManners = insults(text);
+	if (wotsize(text) > 400)
+	{
+		wotPenalty += 0.2 * Math.floor((wotsize(text) - 400) / 200); // More than 400 characters/paragraph is too much
+	}
+	// Above code is for adding penalty for wall of text
 	// Above code is for adding penalties for phrases
 	if (text.length !== 0)
 	{
-		var maturityRatio = 1 - ((badCase + badPunc + badRepeat) / text.length) - penalty; // The amount of "bad" characters per character - penalty deductions
+		var maturityRatio = 1 - ((badCase + badPunc + badRepeat + (badManners * 10) /* badManners is worst than the rest of these */) / text.length) - wotPenalty; // The amount of "bad" characters per character - penalty deductions
 		var maturity = maturityRatio * 100; // The maturity rating is a percentage of the maturity ratio
 		if (maturity < 0)
 		{
@@ -200,15 +204,4 @@ function html_maturity()
 		color = "lightblue";
 	}
 	document.body.style.background = color;
-}
-
-function spamtext(text)
-{
-	var strippedText = text.toLowerCase().replace(/ /g, ""); // Converts all to lowercase, then removes all spaces
-	var indexFNaF = search(strippedText, "fnaf"); // Detect if the phrase "fnaf" is inside
-	var inindexlist = false;
-	var containsFNaF = indexFNaF !== -1;
-	var mature = maturity(text) >= 85;
-	var isspam = !clear && containsFNaF;
-	return isspam;
 }

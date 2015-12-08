@@ -151,9 +151,9 @@ function insults(string)
 	for (var i = 0; i < indexList.length; i++)
 	{
 		var insults = new RegExp(indexList[i], "g");
-		if (string.match(insults) !== null)
+		if (strippedString.match(insults) !== null)
 		{
-			insultPenalty += string.match(insults).length
+			insultPenalty += strippedString.match(insults).length;
 		}
 	}
 	return insultPenalty;

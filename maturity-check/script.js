@@ -121,7 +121,19 @@ function spam(string)
 	var hasSpamSymbols = search(spamPunctuation, string) === -1;
 	for (var i = 0; i < stringList.length; i++)
 	{
-		if (stringList[i].length > 10 && hasSpamSymbols && stringList[i].toLowerCase() != "supercalifragilisticexpianadocious")
+		for (var x = stringList[i].length - 1; x >= 0; x--)
+		{
+			console.log(x);
+			if (stringList[i][x] == ".")
+			{
+				stringList[i] = stringList[i].slice(0, stringList[i].length - 2); // Remove dots from the "eyes" of this function
+			}
+			else
+			{
+				break; // Once the consecutive dots stop, break from the loop; leave the judgement of overly long ellipsises to the repeatLetter function
+			}
+		}
+		if (stringList[i].length > 10 && hasSpamSymbols && stringList[i].toLowerCase() != "supercalifragilisticexpianadocious" && stringList[i][stringList[i].length - 1] != ".")
 		{
 			spam += stringList[i].length;
 		}

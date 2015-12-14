@@ -18,7 +18,7 @@ function choose(n, k)
 function pTriangle(uptorow)
 {
 	var pascalsTriangle = [];
-	for (var i = 0; i < uptorow; i++)
+	for (var i = 0; i <= uptorow; i++)
 	{
 		var tempList = [];
 		for (var x = 0; x <= i; x++)

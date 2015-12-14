@@ -77,12 +77,12 @@ function badCases(string)
 function repeatLetters(string)
 {
 	var repeatPenalty = 0;
-	var repeatExceptions = ["aaaaba", "illlit", "gillless", "wallless", "bulllike", "hilllike", "aaadonta", "willless", "shellless", "skillless", "skulllike", "goddessship", "hostessship", "willlessness", "headmistressship"];
+	var repeatExceptions = ["aaaaba", "illlit", "gillless", "wallless", "bulllike", "hilllike", "aaadonta", "willless", "shellless", "skillless", "skulllike", "goddessship", "hostessship", "willlessness", "headmistressship"]; // 3-letter-repeats are OK for these words
 	var newString = exception(string.toLowerCase(), repeatExceptions);
 	var streak = 0; // The more repeat letters you have in a row, the bigger the penalty will be per letter.
 	for (var i = 2; i < string.length; i++)
 	{
-		if (newString[i] == newString[i - 1] && newString[i - 1] == newString[i - 2] && (newString[i].match(/^[A-z]+$/) || (newString[i] == "." && newString[i - 2] == newString[i - 3]))) // The last && is to allow 3-dot-ellipsises to escape penalization
+		if (newString[i] == newString[i - 1] && newString[i - 1] == newString[i - 2] && (newString[i].match(/^[A-z]+$/) || (newString[i] == "." && newString[i - 2] == newString[i - 3]))) // The last part of the boolean is to only penalize when the dots get to 4 in a row
 		{
 			streak += 1;
 			repeatPenalty += streak;
@@ -248,9 +248,4 @@ function html_maturity()
 		color = "lightblue";
 	}
 	document.body.style.background = color;
-}
-
-function delay_maturity()
-{
-	setTimeout(html_maturity, 1);
 }

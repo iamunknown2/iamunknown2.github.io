@@ -1,0 +1,26 @@
+button
+{
+	display: block;
+	margin: auto;
+	text-align: center;
+	font-family: monospace;
+}
+
+#val
+{
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: monospace;
+}
+
+#triangle
+{
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
+	font-family: monospace;
+	font-size: 20px;
+}
+

@@ -43,3 +43,15 @@ function htmlPTriangle(uptorow)
 		triangleDiv.innerHTML += newRow + "\n<br>";
 	}
 }
+
+function toggleAlign()
+{
+	if (document.getElementById("triangle").style.textAlign == "left")
+	{
+		document.getElementById("triangle").style.textAlign = "center";
+	}
+	else
+	{
+		document.getElementById("triangle").style.textAlign = "left";
+	}
+}

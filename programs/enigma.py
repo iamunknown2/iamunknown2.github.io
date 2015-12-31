@@ -1,6 +1,9 @@
 import string
+try: input = raw_input
+except NameError: pass
 
-alphabet = string.ascii_lowercase + " "
+alphabet = string.ascii_lowercase + " " 
+rotor_count = 15
 
 rotor1 = ["t", "z", "l", "d", "u", " ", "y", "i", "m", "c", "f", "o", "b", "q", "r", "s", "h", "k", "e", "j", "v", "g", "a", "p", "w", "x", "n"]
 rotor2 = ["p", "e", "t", "s", "m", "n", "z", "k", "d", "o", "r", "l", "x", "v", "i", "f", " ", "j", "g", "b", "c", "y", "a", "q", "h", "u", "w"]
@@ -14,6 +17,9 @@ rotor9 = ["a", "h", "j", "o", "f", "d", "r", "g", "z", "k", "n", "t", " ", "w", 
 rotor10 = ["t", "g", "j", "i", "l", "q", "m", "s", "p", "v", "x", "d", "a", "c", "y", "h", "o", "r", "e", "u", " ", "z", "k", "n", "w", "b", "f"]
 rotor11 = ["s", "x", "n", "q", "v", "l", " ", "o", "y", "p", "z", "w", "f", "m", "r", "u", "t", "g", "c", "j", "d", "i", "k", "a", "e", "h", "b"]
 rotor12 = ["j", "y", "m", "o", "f", "g", "s", "e", "k", " ", "n", "i", "w", "v", "x", "c", "h", "p", "t", "l", "u", "a", "r", "z", "b", "d", "q"]
+rotor13 = ["z", "l", "g", "x", "e", "j", "s", "a", "v", "i", "c", "t", "f", "w", "b", "q", "o", "u", "r", " ", "h", "d", "k", "p", "n", "m", "y"]
+rotor14 = ["o", "v", "n", "g", "m", "d", "u", "r", "f", "e", "i", "l", "x", "y", "k", "s", "a", " ", "q", "b", "t", "c", "p", "j", "h", "w", "z"]
+rotor15 = ["a", "v", "n", "g", "k", "l", "q", "j", "p", "y", "m", "i", "t", "x", "w", "r", "f", "s", " ", "c", "h", "o", "z", "u", "d", "b", "e"]
 
 def shuffle(lst):
 	last = len(lst)
@@ -24,28 +30,9 @@ def shuffle(lst):
 	return new_lst
 
 def full_shuffle(rotors, cycle_count):
-	rotors[11] = shuffle(rotors[11])
-	if (cycle_count % 26 == 0):
-		rotors[10] = shuffle(rotors[10])
-	if (cycle_count % 26 ** 2 == 0):
-		rotors[9] = shuffle(rotors[9])
-	if (cycle_count % 26 ** 3 == 0):
-		rotors[8] = shuffle(rotors[8])
-	if (cycle_count % 26 ** 4 == 0):
-		rotors[7] = shuffle(rotors[7])
-	if (cycle_count % 26 ** 5 == 0):
-		rotors[6] = shuffle(rotors[6])
-	if (cycle_count % 26 ** 6 == 0):
-		rotors[5] = shuffle(rotors[5])
-	if (cycle_count % 26 ** 7 == 0):
-		rotors[4] = shuffle(rotors[4])
-	if (cycle_count % 26 ** 8 == 0):
-		rotors[3] = shuffle(rotors[3])
-	if (cycle_count % 26 ** 9 == 0):
-		rotors[2] = shuffle(rotors[2])
-	if (cycle_count % 26 ** 10 == 0):
-		rotors[1] = shuffle(rotors[1])
-	if (cycle_count % 26 ** 11 == 0):
+	for i in range(rotor_count):
+		if (cycle_count % 26 ** i == 0):
+			rotors[rotor_count - (i + 1)] = shuffle(rotors[rotor_count - (i + 1)])
 		rotors[0] = shuffle(rotors[0])
 	return rotors
 
@@ -70,7 +57,7 @@ def encrypt(plaintext, position, order):
 		lead = alphabet.index(i)
 		for x in rotors:
 			lead = alphabet.index(x[lead])
-		codetext += rotors[11][lead]
+		codetext += rotors[rotor_count - 1][lead]
 		rotors = full_shuffle(rotors, cycle_count)
 	return codetext
 
@@ -94,5 +81,14 @@ def decrypt(codetext, position, order):
 		rotors = full_shuffle(rotors, cycle_count)
 	return plaintext
 
-print(encrypt("this is a test", "abcdefghijkl", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
-print(decrypt("drcvifbletfjsb", "abcdefghijkl", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
+action = input("(e) Encrypt or (d) decrypt?\n")
+if (action.lower() == "e"):
+	plaintext = input("Enter plaintext to encrypt\n")
+	position = input("Enter position (any combination of 15 alphabet letters)\n")
+	order = input("Enter order as list (1 2 ... all the way to 15, but scrambled up)\n").split()
+	print(encrypt(plaintext, position, order))
+if (action.lower() == "d"):
+	codetext = input("Enter codetext to decrypt\n")
+	position = input("Enter position (any combination of 15 alphabet letters)\n")
+	order = input("Enter order as list (1 2 ... all the way to 15, but scrambled up)\n").split()
+	print(decrypt(codetext, position, order))

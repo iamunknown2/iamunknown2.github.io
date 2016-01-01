@@ -84,11 +84,11 @@ def decrypt(codetext, position, order):
 action = input("(e) Encrypt or (d) decrypt?\n")
 if (action.lower() == "e"):
 	plaintext = input("Enter plaintext to encrypt\n")
-	position = input("Enter position (any combination of 15 alphabet letters)\n")
+	position = input("Enter position (any combination of 15 alphabet letters or spaces)\n")
 	order = input("Enter order as list (1 2 ... all the way to 15, but scrambled up)\n").split()
 	print(encrypt(plaintext, position, order))
 if (action.lower() == "d"):
 	codetext = input("Enter codetext to decrypt\n")
-	position = input("Enter position (any combination of 15 alphabet letters)\n")
+	position = input("Enter position\n")
 	order = input("Enter order as list (1 2 ... all the way to 15, but scrambled up)\n").split()
 	print(decrypt(codetext, position, order))

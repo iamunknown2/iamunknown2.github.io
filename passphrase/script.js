@@ -3,7 +3,6 @@ function generatePassPhrase()
 	var commonList = [];
 	function resultToList(result)
 	{
-		commonList = result;
 	}
 	function ajaxFunction(callback)
 	{
@@ -18,7 +17,7 @@ function generatePassPhrase()
 			}
 		);
 	}
-	ajaxFunction(result, resultToList);
+	ajaxFunction(function(result){commonList = result.split("\n");});
 	console.log(commonList);
 	var word1_item = Math.floor(Math.random() * commonList.length);
 	var word2_item = Math.floor(Math.random() * commonList.length);

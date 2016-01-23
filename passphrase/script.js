@@ -1,8 +1,18 @@
 function cap(word)
 {
-	newWord = word[0].toUpperCase() + word.slice(1);
+	try
+	{
+		upperLetter = word[0].toUpperCase();
+	}
+	catch (TypeError)
+	{
+		upperLetter = word[0];
+	}
+	rest = word.slice(1);
+	newWord = upperLetter + rest;
 	return newWord;
 }
+
 function generatePassPhrase()
 {
 	var commonList = [];
@@ -25,4 +35,9 @@ function generatePassPhrase()
 			}
 		}
 	);
+}
+
+function eternityGenerator()
+{
+	setInterval(generatePassPhrase, 10);
 }

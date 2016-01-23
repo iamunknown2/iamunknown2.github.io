@@ -1,3 +1,8 @@
+function cap(word)
+{
+	newWord = word[0].toUpperCase() + word.slice(1);
+	return newWord;
+}
 function generatePassPhrase()
 {
 	var commonList = [];

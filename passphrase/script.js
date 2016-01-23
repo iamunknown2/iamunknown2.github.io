@@ -10,7 +10,6 @@ function generatePassPhrase()
 	(
 		{
 			url: "./2048.txt",
-			"async": false,
 			"success": function(result)
 			{
 				commonList = result.split("\n");

@@ -10,14 +10,14 @@ function generatePassPhrase()
 		(
 			{
 				url: "./2048.txt",
+				async: false,
 				success: function(result)
 				{
-					callback(result);
+					commonList = result.split("\n");
 				}
 			}
 		);
 	}
-	ajaxFunction(function(result){commonList = result.split("\n");});
 	console.log(commonList);
 	var word1_item = Math.floor(Math.random() * commonList.length);
 	var word2_item = Math.floor(Math.random() * commonList.length);

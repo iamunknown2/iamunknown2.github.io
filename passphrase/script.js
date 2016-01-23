@@ -39,5 +39,10 @@ function generatePassPhrase()
 
 function eternityGenerator()
 {
-	setInterval(generatePassPhrase, 10);
+	eternity = setInterval(generatePassPhrase, 10);
+}
+
+function eternityStopper()
+{
+	clearInterval(eternity);
 }

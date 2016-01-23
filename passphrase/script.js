@@ -1,17 +1,24 @@
 function generatePassPhrase()
 {
 	var commonList = [];
-	$.ajax
-	(
-		{
-			url: "./2048.txt",
-			success: function(result)
+	function resultToList(result)
+	{
+		commonList = result;
+	}
+	function ajaxFunction(callback)
+	{
+		$.ajax
+		(
 			{
-				console.log(result.split("\n"));
-				commonList = result.split("\n");
+				url: "./2048.txt",
+				success: function(result)
+				{
+					callback(result);
+				}
 			}
-		}
-	);
+		);
+	}
+	ajaxFunction(result, resultToList);
 	console.log(commonList);
 	var word1_item = Math.floor(Math.random() * commonList.length);
 	var word2_item = Math.floor(Math.random() * commonList.length);

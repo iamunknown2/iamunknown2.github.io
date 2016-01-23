@@ -7,11 +7,11 @@ function generatePassPhrase()
 			url: "./2048.txt",
 			success: function(result)
 			{
-				console.log(result);
 				commonList = result.split("\n");
 			}
 		}
 	);
+	console.log(commonList);
 	var word1_item = Math.floor(Math.random() * commonList.length);
 	var word2_item = Math.floor(Math.random() * commonList.length);
 	var word3_item = Math.floor(Math.random() * commonList.length);

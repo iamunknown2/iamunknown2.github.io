@@ -22,7 +22,7 @@ function generatePassPhrase()
 				var word2 = commonList[word2_item];
 				var word3 = commonList[word3_item];
 				var word4 = commonList[word4_item];
-				document.getElementById("passphrase-output").innerHTML = word1 + word2 + word3 + word4;
+				document.getElementById("passphrase-output").innerHTML = cap(word1) + cap(word2) + cap(word3) + cap(word4);
 			}
 		}
 	);

@@ -26,5 +26,4 @@ function generatePassPhrase()
 			}
 		}
 	);
-	console.log(commonList);
 }

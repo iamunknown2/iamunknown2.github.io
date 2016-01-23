@@ -249,3 +249,8 @@ function html_maturity()
 	}
 	document.body.style.background = color;
 }
+
+function delay_maturity()
+{
+	setTimeout(html_maturity, 10);
+}

@@ -17,6 +17,12 @@ body
 
 button
 {
-	font-size: 20px;
+	font-size: 25px;
 	font-family: 'Open Sans';
+	height: 150px;
+	width: 150px;
+	background-color: lightgreen;
+	box-shadow: none;
+	border-radius: 50%;
+	border: none;
 }

@@ -1,0 +1,30 @@
+body
+{
+	font-family: 'Open Sans', sans-serif;
+}
+button
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+	height: 125px;
+	width: 125px;
+	background-color: lightgreen;
+	box-shadow: none;
+	border-radius: 50%;
+	border: none;
+	margin: 10px;
+}
+#buttons1
+{
+	text-align: center;
+}
+#stopwatch
+{
+	font-size: 70px;
+	text-align: center;
+}
+#reset1
+{
+	background-color: lightblue;
+}
+

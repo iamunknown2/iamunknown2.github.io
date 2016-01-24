@@ -20,7 +20,7 @@ function generatePassPhrase()
 	{
 		output.innerHTML = "Fetching list of words..."
 	}
-	setTimeout(message, 250);
+	popup = setTimeout(message, 250);
 	var commonList = [];
 	$.ajax
 	(
@@ -38,7 +38,7 @@ function generatePassPhrase()
 				var word3 = commonList[word3_item];
 				var word4 = commonList[word4_item];
 				output.innerHTML = cap(word1) + cap(word2) + cap(word3) + cap(word4);
-				return "Success";
+				clearTimeout(popup);
 			}
 		}
 	);

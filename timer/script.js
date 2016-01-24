@@ -1,4 +1,7 @@
 // render function is to draw on HTML
+var time2 = 0;
+var stat2 = 0;
+
 function render2(id, time)
 {
 	var milliseconds = time % 100;
@@ -11,23 +14,18 @@ function render2(id, time)
 	document.getElementById(id).innerHTML = minutes + ":" + seconds
 }
 
-var time2 = 0;
-var stat2 = 0;
 function alarm()
 {
 	var alarm = new Audio("../other/alarm.mp3");
-	var x = 0;
 	function play()
 	{
 		alarm.play();
-		x += 1;
-		if (x == 9)
-		{
-			window.clearInterval(playfour);
-		}
 	}
 	alarm.play();
-	var playfour = setInterval(play, 500);
+	setTimeout(play, 1000);
+	setTimeout(play, 2000);
+	setTimeout(play, 3000);
+	setTimeout(play, 4000);
 }
 
 function timer_helper()
@@ -65,7 +63,7 @@ function timer_helper()
 
 function toggle2()
 {
-	if (stat2 == 0 || stat2 == 2)
+	if (stat2 == 0 && time2 !== 0)
 	{
 		stat2 = 1;
 	}

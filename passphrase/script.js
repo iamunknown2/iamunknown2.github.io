@@ -15,6 +15,8 @@ function cap(word)
 
 function generatePassPhrase()
 {
+	var output = document.getElementById("passphrase-output");
+	output.innerHTML = "Fetching list of words..."
 	var commonList = [];
 	$.ajax
 	(
@@ -31,7 +33,7 @@ function generatePassPhrase()
 				var word2 = commonList[word2_item];
 				var word3 = commonList[word3_item];
 				var word4 = commonList[word4_item];
-				document.getElementById("passphrase-output").innerHTML = cap(word1) + cap(word2) + cap(word3) + cap(word4);
+				output.innerHTML = cap(word1) + cap(word2) + cap(word3) + cap(word4);
 			}
 		}
 	);

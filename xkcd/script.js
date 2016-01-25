@@ -1,0 +1,38 @@
+function set(comic)
+{
+	document.getElementById("title").innerHTML = "Loading...";
+	document.getElementById("hover").innerHTML = "Please Wait...";
+	document.getElementById("img").setAttribute("src", "https://imgs.xkcd.com/comics/estimation.png");
+	document.getElementById("number").innerHTML = "Loading comic taken from #612";
+	$.ajax
+	(
+		{
+			url: "http://dynamic.xkcd.com/api-0/jsonp/comic/" + comic + "?callback=?",
+			dataType: "JSONP",
+			success: function(data)
+			{
+				document.getElementById("img").style.visibility = "hidden";
+				document.getElementById("img").setAttribute("src", data.img);
+				document.getElementById("title").innerHTML = data.title;
+				document.getElementById("hover").innerHTML = data.alt;
+				document.getElementById("number").innerHTML = data.num;
+				document.getElementById("img").style.visibility = "";
+			}
+		}
+	);
+}
+
+function next()
+{
+	var num = parseInt(document.getElementById("number").innerHTML);
+	document.getElementById("number").innerHTML = num + 1;
+	set(num + 1)
+}
+
+function prev()
+{
+	var num = parseInt(document.getElementById("number").innerHTML);
+	document.getElementById("number").innerHTML = num - 1;
+	set(num - 1)
+}
+

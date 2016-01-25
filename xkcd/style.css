@@ -1,0 +1,44 @@
+body
+{
+	background-color: black;
+}
+
+#hover
+{
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	margin: 20px;
+}
+
+#comic
+{
+	text-align: center;
+}
+
+#title
+{
+	font-size: 50px;
+	color: white;
+	text-align: center;
+	margin: 10px;
+}
+
+#buttons, #number
+{
+	color: white;
+	font-size: 50px;
+	text-decoration: none;
+	text-align: center;
+}
+
+#number
+{
+	display: inline-block;
+}
+
+#img
+{
+	max-width: 80%;
+}
+

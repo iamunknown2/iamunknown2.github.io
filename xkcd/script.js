@@ -11,12 +11,13 @@ function set(comic)
 			dataType: "JSONP",
 			success: function(data)
 			{
-				document.getElementById("img").style.visibility = "hidden";
+				document.getElementById("img").style.display = "none";
+				document.getElementById("img").removeAttribute("src");
 				document.getElementById("img").setAttribute("src", data.img);
 				document.getElementById("title").innerHTML = data.title;
 				document.getElementById("hover").innerHTML = data.alt;
 				document.getElementById("number").innerHTML = data.num;
-				document.getElementById("img").style.visibility = "";
+				document.getElementById("img").style.display = "";
 			}
 		}
 	);

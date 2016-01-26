@@ -2,19 +2,27 @@
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 		<script src="script.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body onload=set()>
-		<div id="buttons">
+		<div id="search">
+			<input type="text" id="jump_number">
+			<button onclick=jump()>Jump to Comic</button>
+		</div>
+		<div id="top">
 			<a id="prev_button" href="javascript:prev()">&lt;&lt;</a>
 			<div id="number"></div>
 			<a id="next_button" href="javascript:next()">&gt;&gt;</a>
+			<br>
+			<a id="latest_button" href="javascript:set()">Latest</a>
 		</div>
 		<br>
 		<div id="title"></div>
 		<div id="comic">
-			<img id="img" src="https://imgs.xkcd.com/comics/estimation.png" />
+			<img id="img" src="https://imgs.xkcd.com/comics/estimation.png">
 		</div>
 		<div id="hover"></div>
 	</body>
+</html>

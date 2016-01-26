@@ -1,5 +1,8 @@
 function set(comic)
 {
+	document.getElementById("prev_button").style.display = "none";
+	document.getElementById("next_button").style.display = "none";
+	document.getElementById("latest_button").style.display = "none";
 	document.getElementById("title").innerHTML = "Loading...";
 	document.getElementById("hover").innerHTML = "Please Wait...";
 	document.getElementById("img").setAttribute("src", "https://imgs.xkcd.com/comics/estimation.png");
@@ -18,6 +21,9 @@ function set(comic)
 				document.getElementById("hover").innerHTML = data.alt;
 				document.getElementById("number").innerHTML = data.num;
 				document.getElementById("img").style.display = "";
+				document.getElementById("prev_button").style.display = "";
+				document.getElementById("next_button").style.display = "";
+				document.getElementById("latest_button").style.display = "";
 			}
 		}
 	);
@@ -37,3 +43,7 @@ function prev()
 	set(num - 1)
 }
 
+function jump()
+{
+	set(parseInt(document.getElementById("jump_number").value));
+}

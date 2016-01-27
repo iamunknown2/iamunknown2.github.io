@@ -26,7 +26,7 @@ function generatePassPhrase()
 	(
 		{
 			url: "./2048.txt",
-			"success": function(result)
+			success: function(result)
 			{
 				commonList = result.split("\n");
 				var word1_item = Math.floor(Math.random() * commonList.length);

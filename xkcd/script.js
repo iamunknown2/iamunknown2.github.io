@@ -56,7 +56,6 @@ function set(isNewest)
 function next()
 {
 	var num = parseInt(document.getElementById("number").innerHTML);
-	document.getElementById("number").innerHTML = num + 1;
 	window.location.hash = (num + 1).toString();
 	set();
 }
@@ -64,7 +63,6 @@ function next()
 function prev()
 {
 	var num = parseInt(document.getElementById("number").innerHTML);
-	document.getElementById("number").innerHTML = num - 1;
 	window.location.hash = (num - 1).toString();
 	set();
 }

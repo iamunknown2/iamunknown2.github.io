@@ -1,5 +1,11 @@
-function set(comic)
+function set(isNewest)
 {
+	if (isNewest == 1)
+	{
+		window.location.hash = "";
+	}
+	var comic = window.location.hash;
+	comic = comic.slice(1);
 	var prevImageSource = document.getElementById("img").getAttribute("src");
 	var prevNumber = document.getElementById("number").innerHTML;
 	var prevHover = document.getElementById("hover").innerHTML;
@@ -24,6 +30,7 @@ function set(comic)
 				document.getElementById("title").innerHTML = data.title;
 				document.getElementById("hover").innerHTML = data.alt;
 				document.getElementById("number").innerHTML = data.num;
+				window.location.hash = data.num;
 				document.getElementById("img").style.display = "";
 				document.getElementById("prev_button").style.display = "";
 				document.getElementById("next_button").style.display = "";
@@ -50,17 +57,21 @@ function next()
 {
 	var num = parseInt(document.getElementById("number").innerHTML);
 	document.getElementById("number").innerHTML = num + 1;
-	set(num + 1)
+	window.location.hash = (num + 1).toString();
+	set();
 }
 
 function prev()
 {
 	var num = parseInt(document.getElementById("number").innerHTML);
 	document.getElementById("number").innerHTML = num - 1;
-	set(num - 1)
+	window.location.hash = (num - 1).toString();
+	set();
 }
 
 function jump()
 {
-	set(parseInt(document.getElementById("jump_number").value));
+	var num = parseInt(document.getElementById("jump_number").value);
+	window.location.hash = num;
+	set();
 }

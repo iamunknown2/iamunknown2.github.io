@@ -1,0 +1,35 @@
+body
+{
+	text-align: center;
+	background-color: lightblue;
+}
+
+textarea
+{
+	margin: 3px;
+	width: 50%;
+	height: 5em;
+}
+
+input
+{
+	margin: 3px;
+	width: 50%;
+	padding: 10px;
+	max-width: 75%;
+}
+
+#answer
+{
+	margin: 30px;
+}
+
+button
+{
+	font-size: 25px;
+	font-family: "Open Sans";
+	padding: 10px;
+	background-color: lightgreen;
+	text-align: center;
+	border: none;
+}

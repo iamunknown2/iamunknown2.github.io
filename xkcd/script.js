@@ -48,6 +48,7 @@ function set(isNewest)
 				document.getElementById("prev_button").style.display = "";
 				document.getElementById("next_button").style.display = "";
 				document.getElementById("latest_button").style.display = "";
+				window.location.hash = prevNumber;
 			}
 		}
 	);

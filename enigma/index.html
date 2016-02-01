@@ -6,14 +6,25 @@
 </head>
 <body>
 	<div id="textareas">
-		<textarea id="text" row></textarea>
+		<br>
+		Type in stuff to encrypt/decrypt. Alphabet, period, comma, question mark and exclamation marks allowed
+		</br>
+		<input type="text" id="text" row></textarea>
+		<br>
+		Type in any 15-character combination of letters a-z. Alphabet, period, comma question mark and exclamation marks allowed.
 		<br>
 		<input type="text" id="position"></textarea>
+		<br>
+		Type in any 15-number combination of numbers 1-15 (repetition allowed), separated by spaces. For example,
+		<br>
+		1 1 2 3 5 8 13 15 12 13 7 8 9 10 15
+		<br>
+		Do NOT put spaces or the end, or the encrypter/decrypter WILL NOT work!
 		<br>
 		<input type="text" id="order"></textarea>
 	</div>
 	<button onclick=encryptHTML()>Encrypt</button>
 	<button onclick=decryptHTML()>Decrypt</button>
 	<br>
-	<textarea id="answer" readonly></textarea>
+	<input type="text" id="answer" readonly></textarea>
 </body>

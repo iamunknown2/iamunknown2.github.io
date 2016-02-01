@@ -5,8 +5,7 @@ var rotor1 = ["d", "g", "!", "c", "s", "x", "l", "t", "k", "u", "n", "i", "b", "
 var rotor2 = ["l", "v", "i", "d", "u", "w", " ", "o", "e", "r", "x", "j", "n", "g", "s", "c", "h", ".", ",", "m", "?", "p", "q", "!", "b", "k", "f", "a", "z", "y", "t"];
 var rotor3 = ["w", "i", "v", "c", "j", "l", "f", "a", "o", "k", "h", "p", "n", "m", ",", "u", "r", "x", "z", "d", "s", "e", "y", " ", "b", "t", "g", "q", "!", ".", "?"];
 var rotor4 = ["v", "q", "j", "d", "k", "o", "h", "t", "l", " ", "r", "p", "s", "u", "y", ",", "?", "i", "x", ".", "w", "b", "e", "n", "g", "!", "m", "a", "z", "c", "f"];
-var rotor5 = ["d", "v", "c", "q", ",", "!", "j", "p", "x", ".", "?", " ", "b", "h", "k", "u", "z", "e", "n", "r", "y", "w", "l", "s", "o", "t", "a", "f", "g", "i", "m"];
-var rotor6 = ["l", "r", "!", "j", "d", "x", "h", "p", "a", "u", "s", "m", ".", "w", "o", "k", "v", "c", "f", "t", "?", "y", "n", "e", " ", "g", "q", "z", ",", "i", "b"];
+var rotor5 = ["d", "v", "c", "q", ",", "!", "j", "p", "x", ".", "?", " ", "b", "h", "k", "u", "z", "e", "n", "r", "y", "w", "l", "s", "o", "t", "a", "f", "g", "i", "m"]; var rotor6 = ["l", "r", "!", "j", "d", "x", "h", "p", "a", "u", "s", "m", ".", "w", "o", "k", "v", "c", "f", "t", "?", "y", "n", "e", " ", "g", "q", "z", ",", "i", "b"];
 var rotor7 = [".", "h", "p", "y", "k", "g", "d", "c", "t", "x", "r", "e", "q", "a", ",", " ", "u", "l", "!", "o", "b", "i", "j", "f", "n", "m", "v", "w", "z", "?", "s"];
 var rotor8 = ["i", "z", "m", "y", "p", "l", "w", "f", "a", "k", "q", " ", "v", "s", "e", "x", ",", "t", "!", "g", "r", "o", "j", "c", "?", ".", "h", "u", "n", "d", "b"];
 var rotor9 = ["r", "o", "f", ",", "m", "x", "v", "t", "l", "w", "y", "e", "j", "i", "a", "k", "u", "b", "h", "p", "q", "n", "?", " ", "c", "!", "g", "d", "z", "s", "."];
@@ -74,6 +73,7 @@ function numToLetter(plaintext)
 function encrypt(plaintext, position, order)
 {
 	plaintext = numToLetter(plaintext);
+	plaintext = plaintext.replace(/\*/g, " ");
 	var rotors = [];
 	for (var i in order)
 	{
@@ -97,11 +97,13 @@ function encrypt(plaintext, position, order)
 		codetext += rotors[rotor_count - 1][lead];
 		rotors = full_shuffle(rotors, cycle_count);
 	}
+	codetext = codetext.replace(/ /g, "*");
 	return codetext;
 }
 
 function decrypt(codetext, position, order)
 {
+	codetext = codetext.replace(/\*/g, " ");
 	var rotors = [];
 	for (var i in order)
 	{

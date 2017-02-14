@@ -1,0 +1,50 @@
+body
+{
+	font-family: "Open Sans", sans-serif;
+}
+
+#big-container
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	opacity: 0;
+}
+
+#answer
+{
+	text-align: center;
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+#dialog
+{
+	font-size: 20px;
+}
+
+#color
+{
+	font-size: 75px;
+	display: none;
+}
+
+.options
+{
+	font-size: 60px;
+	text-align: center;
+}
+#primer
+{
+	display: block;
+	margin: auto;
+	max-height: 30%;
+	max-width: 30%;
+}
+a
+{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}

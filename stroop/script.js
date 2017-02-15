@@ -56,7 +56,7 @@ var cycle = function(color) {
 		while (colorWord == colorElement.innerHTML) {
 			colorWord = randomColor();
 		}
-		if (correspondingSequence[counter - 1] == 1) {
+		if (correspondingSequence[counter] == 1) {
 			colorColor = randomColor();
 			while (colorColor == colorWord) {
 				colorColor = randomColor();
@@ -80,10 +80,7 @@ var cycle = function(color) {
 		setTimeout(function() {
 			juststarted = false;
 			colorWord = randomColor();
-			while (colorWord == colorElement.innerHTML) {
-				colorWord = randomColor();
-			}
-			if (correspondingSequence[counter - 1] == 1) {
+			if (correspondingSequence[counter] == 1) {
 				colorColor = randomColor();
 				while (colorColor == colorWord) {
 					colorColor = randomColor();

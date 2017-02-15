@@ -47,8 +47,8 @@ var response = function(color) {
 var cycle = function(color) {
 	counter += 1;
 	if (counter > 20) {
-		resultsElement.innerHTML = nonCorrespondingColorArray + ";" + correspondingColorArray;
-		dialogElement.innerHTML = "The experiment has ended. Thank you for participating. Please copy and paste the lists below (keep the brackets) and send them to <a href='mailto:strooptest.100.eyc314@xoxy.net?subject=Results&body=" + resultsElement.innerHTML +"'>strooptest.100.eyc314@xoxy.net</a> (if you can open the mailto link, the entire email has already been packaged and you can simply click send)";
+		resultsElement.innerHTML = window.location.href.split("#")[1] + ";" + nonCorrespondingColorArray + ";" + correspondingColorArray;
+		dialogElement.innerHTML = "The experiment has ended. Thank you for participating. Please copy and paste the lists below (keep the brackets) and send them to <a href='mailto:strooptest.100.eyc314@xoxy.net?subject=Results&body=" + resultsElement.innerHTML +"'>strooptest.100.eyc314@xoxy.net</a> (if you can open the mailto link (the bold part), the entire email has already been packaged and you can simply click send)";
 		colorElement.style.display = "none";
 	} else if (!juststarted && color != "start") {
 		response(color);
